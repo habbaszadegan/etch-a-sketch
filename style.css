@@ -1,0 +1,16 @@
+#container {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    background: green;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border: solid black 5px;
+}
+
+div {
+    background: blue;
+    flex: 1 0 auto;
+    width: 25px;
+}
