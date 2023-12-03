@@ -9,8 +9,9 @@
     border: solid black 5px;
 }
 
-div {
+.divElement {
     background: blue;
+    margin: 0;
     flex: 1 0 auto;
     width: 25px;
 }
