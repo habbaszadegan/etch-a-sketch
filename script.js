@@ -10,13 +10,11 @@ function createGrid (gridNum) {
         const divElement = document.createElement('div');
         container.appendChild(divElement);
         divElement.classList.add('divElement');
-        divElement.classList.add(`divElement${i}`);
         divElement.setAttribute('style', `flex: 1 1 ${containerSize}px;`)
         divElement.addEventListener('mouseover', () => {
             divElement.classList.add('divElement-mouseover');
             divElement.setAttribute('style', `flex: 1 1 ${containerSize}px;`)
         })
-        console.log(container.lastChild);
     }
 }
 
