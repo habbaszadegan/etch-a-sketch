@@ -2,6 +2,11 @@ const container = document.querySelector('#container');
 const gridSizeInput = document.querySelector('#gridSizeInput');
 const gridSizeOutput = document.querySelector('#gridSizeOutput');
 
+const RED = Math.floor(Math.random() * 255);
+const BLUE = Math.floor(Math.random() * 255);
+const GREEN = Math.floor(Math.random() * 255);
+const rgbCOLOR = `rgb(${RED}, ${GREEN}, ${BLUE})`;
+
 let gridNum = 16;
 
 function createGrid (gridNum) {
@@ -10,10 +15,10 @@ function createGrid (gridNum) {
         const divElement = document.createElement('div');
         container.appendChild(divElement);
         divElement.classList.add('divElement');
-        divElement.setAttribute('style', `flex: 1 1 ${containerSize}px;`)
+        divElement.setAttribute('style', `flex: 1 1 ${containerSize}px;`);
         divElement.addEventListener('mouseover', () => {
             divElement.classList.add('divElement-mouseover');
-            divElement.setAttribute('style', `flex: 1 1 ${containerSize}px;`)
+            divElement.setAttribute('style', `flex: 1 1 ${containerSize}px; background: ${rgbCOLOR}`);
         })
     }
 }
