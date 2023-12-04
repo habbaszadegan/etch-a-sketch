@@ -10,9 +10,15 @@
 }
 
 .divElement {
-    background: blue;
-    flex: 1 1 auto;
-    /* width: 25px; */
+    background: grey;
+    flex: 1 1 31.25px;
     box-sizing: border-box;
-    /* border: solid black 1px; */
+    /* border: solid black .01px; */
+}
+
+.divElement-mouseover {
+    background: white;
+    flex: 1 1 31.25px;
+    box-sizing: border-box;
+    /* border: solid black .01px; */
 }

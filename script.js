@@ -6,13 +6,11 @@ for (let i = 1; i <= 256; i++) {
     // divElement.textContent = i;
     container.appendChild(divElement);
     divElement.classList.add('divElement');
-    // divElement.addEventListener('mouseover', () => {
-    //     divElement.setAttribute('style', 'color: blue; background: white; width: 100%;');
-    // })
+    divElement.addEventListener('mouseover', () => {
+        divElement.classList.add('divElement-mouseover');
+    })
 }
 
-const containerWidth = container.offsetWidth;
-const elementWidth = Math.floor(containerWidth / 16);
+// divElement.setAttribute('style', 'color: blue; background: white;');
 
-divElement.style.width = `${elementWidth}px`;
-divElement.style.height = `${elementWidth}px`;
+// divElement.classList.add('divElement-mouseover');
