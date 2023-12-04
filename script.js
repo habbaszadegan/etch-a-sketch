@@ -6,18 +6,23 @@ let gridNum = 16;
 
 function createGrid (gridNum) {
     for (let i = 1; i <= gridNum * gridNum; i++) {
+        let containerSize = 500/gridNum;
         const divElement = document.createElement('div');
         container.appendChild(divElement);
         divElement.classList.add('divElement');
+        divElement.classList.add(`divElement${i}`);
+        divElement.setAttribute('style', `flex: 1 1 ${containerSize}px;`)
         divElement.addEventListener('mouseover', () => {
             divElement.classList.add('divElement-mouseover');
+            divElement.setAttribute('style', `flex: 1 1 ${containerSize}px;`)
         })
+        console.log(container.lastChild);
     }
 }
 
 function deleteGrid () {
     while (container.firstChild) {
-        container.removeChild(container.firstChild);
+        container.firstChild.remove();
     }
 }
 
@@ -27,15 +32,12 @@ gridSizeInput.addEventListener('click', () => {
         return;
     }
     gridNum = parseInt(gridNum);
-    if (isNaN(gridNum) || gridNum > 100 || gridNum < 1) {
-        alert("please input number between 1 and 100");
+    if (isNaN(gridNum) || gridNum > 64 || gridNum < 1) {
+        alert("please input number between 1 and 64");
         return;
     }
-    console.log(`gridNum is: ${gridNum}`);
     deleteGrid();
     createGrid(gridNum);
 })
 
 createGrid(gridNum);
-
-// store user input in variable. use that variable to create new grid.

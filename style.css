@@ -11,14 +11,10 @@
 
 .divElement {
     background: grey;
-    flex: 1 1 31.25px;
     box-sizing: border-box;
-    /* border: solid black .01px; */
 }
 
 .divElement-mouseover {
     background: white;
-    flex: 1 1 31.25px;
     box-sizing: border-box;
-    /* border: solid black .01px; */
 }
