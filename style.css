@@ -6,12 +6,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    border: solid black 5px;
+    border: solid black 1px;
 }
 
 .divElement {
     background: blue;
-    margin: 0;
-    flex: 1 0 auto;
-    width: 25px;
+    flex: 1 1 auto;
+    /* width: 25px; */
+    box-sizing: border-box;
+    /* border: solid black 1px; */
 }
