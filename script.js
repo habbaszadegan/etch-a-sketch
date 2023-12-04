@@ -1,6 +1,5 @@
 const container = document.querySelector('#container');
 const gridSizeInput = document.querySelector('#gridSizeInput');
-const gridSizeOutput = document.querySelector('#gridSizeOutput');
 
 const RED = Math.floor(Math.random() * 255);
 const BLUE = Math.floor(Math.random() * 255);
@@ -9,9 +8,9 @@ const rgbCOLOR = `rgb(${RED}, ${GREEN}, ${BLUE})`;
 
 let gridNum = 16;
 
-function createGrid (gridNum) {
-    for (let i = 1; i <= gridNum * gridNum; i++) {
-        let containerSize = 500/gridNum;
+function createGrid (arshalanNum) {
+    for (let i = 1; i <= arshalanNum * arshalanNum; i++) {
+        let containerSize = 500/arshalanNum;
         const divElement = document.createElement('div');
         container.appendChild(divElement);
         divElement.classList.add('divElement');
@@ -30,7 +29,7 @@ function deleteGrid () {
 }
 
 gridSizeInput.addEventListener('click', () => {
-    gridNum = prompt('Grid size? Input between 1 - 100', '');
+    gridNum = prompt('Grid size? Input between 1 - 64', '');
     if (gridNum === null || gridNum === '') {
         return;
     }
