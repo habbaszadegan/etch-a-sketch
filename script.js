@@ -4,11 +4,22 @@ const gridSizeOutput = document.querySelector('#gridSizeOutput');
 
 let gridNum = 16;
 
-// function lessThan100 (num) {
-//     if (num > 100 || num < 1) {
-//         return "Please input number between 1 and 100"
-//     }
-// }
+function createGrid (gridNum) {
+    for (let i = 1; i <= gridNum * gridNum; i++) {
+        const divElement = document.createElement('div');
+        container.appendChild(divElement);
+        divElement.classList.add('divElement');
+        divElement.addEventListener('mouseover', () => {
+            divElement.classList.add('divElement-mouseover');
+        })
+    }
+}
+
+function deleteGrid () {
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+}
 
 gridSizeInput.addEventListener('click', () => {
     gridNum = prompt('Grid size? Input between 1 - 100', '');
@@ -21,15 +32,10 @@ gridSizeInput.addEventListener('click', () => {
         return;
     }
     console.log(`gridNum is: ${gridNum}`);
+    deleteGrid();
+    createGrid(gridNum);
 })
 
-// store user input in variable. use that variable to create new grid.
+createGrid(gridNum);
 
-for (let i = 1; i <= gridNum * gridNum; i++) {
-    const divElement = document.createElement('div');
-    container.appendChild(divElement);
-    divElement.classList.add('divElement');
-    divElement.addEventListener('mouseover', () => {
-        divElement.classList.add('divElement-mouseover');
-    })
-}
+// store user input in variable. use that variable to create new grid.
