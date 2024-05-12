@@ -43,3 +43,33 @@ gridSizeInput.addEventListener('click', () => {
 })
 
 createGrid(gridNum);
+
+// second attempt at assignment
+
+// const main = document.querySelector('.main');
+// const newGrid = document.querySelector('.new-grid');
+
+// function createGrid (gridRows = 16) {
+
+//     for (let i = 0; i < (gridRows*gridRows); i++) {
+//         const box = document.createElement('div');
+//         main.appendChild(box);
+//         box.classList.add('box');
+//         box.style.flexBasis = `calc(100% / ${gridRows})`;
+//         box.addEventListener('mouseover', () => box.classList.add('box-hovered'));
+//     }
+// }
+
+// function userGrid () {
+//     newGrid.addEventListener('click', () => {
+//         while (main.firstChild) {
+//             main.firstChild.remove();
+//         }
+//         const totalBoxes = +prompt('What size grid would you like?', '');
+//         createGrid(totalBoxes);
+//     })
+// }
+
+
+// createGrid();
+// userGrid();
